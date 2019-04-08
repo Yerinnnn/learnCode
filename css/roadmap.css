@@ -2,6 +2,18 @@
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
+.search_icon {
+    width: 24px;
+}
+
+/* .search_form {
+    width: 100%;
+}
+
+.search_bar {
+    width: 70%;
+} */
+
 .roadmap_title {
     text-align: center;
     font-size: 40px;
@@ -17,6 +29,62 @@
     color: white;
 }
 
+.roadmap_graph {
+    display: flex;
+}
+
+.vertical-menu {
+    width: 35%;
+    margin: 20px;
+}
+
+@media (max-width:63em) {
+    .vertical-menu {
+        margin: 10px;
+        /* flex-direction: column; */
+    }
+}
+
+@media (max-width:39.9375em) {
+    .vertical-menu {
+        margin: 10px;
+    }
+
+    .vertical-menu a.active {
+        background-color: #145A7C;
+        font-size: 16px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+.vertical-menu a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+    /* Dark grey background on mouse-over */
+
+}
+
+.vertical-menu a.active {
+    background-color: #145A7C;
+    /* Add a green color to the "active/current" link */
+    color: white;
+    font-size: 30px;
+    width: 500px;
+    height: 80px;
+    /* 상하 정렬을 위한 display 설정 */
+    display: table-cell;
+    vertical-align: middle;
+}
+
 #roadmap_graph_step1 {
     background-color: rgb(96, 157, 187);
 }
@@ -26,49 +94,24 @@
 }
 
 #roadmap_graph_step3 {
-    background-color: rgb(36, 61, 73);
+    background-color: rgb(50, 83, 99);
 }
 
 #roadmap_graph_step4 {
     background-color: rgb(19, 33, 39);
 }
 
-.roadmap_graph {
-    display: flex;
+.menu {
+    user-select: none;
 }
 
-.vertical-menu {
-    width: 500px;
-    margin: 20px;
-  }
-  
-  .vertical-menu a {
-    background-color: #eee;
+.menu-text>a {
     color: black;
-    display: block;
-    padding: 12px; 
-    font-size: 20px;
-    text-decoration: none; /* Remove underline from links */
-  }
-  
-  .vertical-menu a:hover {
-    background-color: #ccc; /* Dark grey background on mouse-over */
+}
 
-  } 
-  
-  .vertical-menu a.active {
-    background-color: #145A7C; /* Add a green color to the "active/current" link */
-    color: white;
-    font-size: 30px;
-    width: 500px;
-    height: 80px;
-    /* 상하 정렬을 위한 display 설정 */
-    display: table-cell;
-    vertical-align: middle;
-  }
-
-
-
+.menu-text>a:hover {
+    color: black;
+}
 
 button,
 img,
@@ -1579,7 +1622,7 @@ a {
 
 a:focus,
 a:hover {
-    color: #1585cf
+    color: #1c5e8a;
 }
 
 a img {

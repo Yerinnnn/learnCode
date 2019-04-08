@@ -1,6 +1,10 @@
 @charset "UTF-8";
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+.search_icon {
+    width: 24px;
+}
+
 button,
 img,
 legend {
@@ -11,6 +15,18 @@ body,
 button,
 legend {
     padding: 0
+}
+
+.menu {
+    user-select: none;
+}
+
+.menu-text>a {
+    color: black;
+}
+
+.menu-text>a:hover {
+    color: black;
 }
 
 .row.collapse>.column,
@@ -1894,8 +1910,8 @@ p+.stat {
 
 .button.hollow:focus,
 .button.hollow:hover {
-    border-color: #145A7C;
-    color: #145A7C
+    border-color: rgb(15, 69, 95);
+    color: rgb(15, 69, 95)
 }
 
 .button.hollow.primary {
@@ -1905,8 +1921,8 @@ p+.stat {
 
 .button.hollow.primary:focus,
 .button.hollow.primary:hover {
-    border-color: #145A7C;
-    color: #145A7C
+    border-color: rgb(15, 69, 95);
+    color: rgb(15, 69, 95)
 }
 
 .button.hollow.secondary {
