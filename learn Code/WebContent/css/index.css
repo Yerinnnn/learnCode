@@ -1,137 +1,8 @@
 @charset "UTF-8";
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-
 .search_icon {
     width: 24px;
-}
-
-/* .search_form {
-    width: 100%;
-}
-
-.search_bar {
-    width: 70%;
-} */
-
-.roadmap_title {
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
-    margin-top: 100px;
-}
-
-.roadmap {
-    text-align: center;
-    margin: 120px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    color: white;
-}
-
-.roadmap_graph {
-    display: flex;
-}
-
-.vertical-menu {
-    width: 35%;
-    margin: 20px;
-}
-
-@media (min-width:40em) {
-    .vertical-menu {
-        margin: 10px;
-        /* flex-direction: column; */
-    }
-
-    .vertical-menu a.active {
-        background-color: #145A7C;
-        font-size: 30px;
-        display: table-cell;
-        vertical-align: middle;
-    }
-}
-
-@media (max-width:39.9375em) {
-    .vertical-menu {
-        margin: 5px;
-    }
-
-    .vertical-menu a.active {
-        background-color: #145A7C;
-        font-size: 16px;
-        /* width: 350px;
-        height: 40px; */
-        display: table-cell;
-        vertical-align: middle;
-    }
-}
-
-/* @media screen and (min-width: 40em) {
-    .vertical-menu a.active {
-      font-size: 30px;
-    }
-  }
-  
-  @media screen and (max-width: 39.9375em) {
-    .vertical-menu a.active {
-      font-size: 16px;
-    }
-  } */
-
-.vertical-menu a {
-    background-color: #eee;
-    color: black;
-    display: block;
-    padding: 12px;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-.vertical-menu a:hover {
-    background-color: #ccc;
-    /* Dark grey background on mouse-over */
-
-}
-
-.vertical-menu a.active {
-    background-color: #145A7C;
-    /* Add a green color to the "active/current" link */
-    color: white;
-    font-size: 30px;
-    width: 500px;
-    height: 80px;
-    /* 상하 정렬을 위한 display 설정 */
-    display: table-cell;
-    vertical-align: middle;
-}
-
-#roadmap_graph_step1 {
-    background-color: rgb(96, 157, 187);
-}
-
-#roadmap_graph_step2 {
-    background-color: rgb(78, 131, 155);
-}
-
-#roadmap_graph_step3 {
-    background-color: rgb(50, 83, 99);
-}
-
-#roadmap_graph_step4 {
-    background-color: rgb(19, 33, 39);
-}
-
-.menu {
-    user-select: none;
-}
-
-.menu-text>a {
-    color: black;
-}
-
-.menu-text>a:hover {
-    color: black;
 }
 
 button,
@@ -144,6 +15,18 @@ body,
 button,
 legend {
     padding: 0
+}
+
+.menu {
+    user-select: none;
+}
+
+.menu-text>a {
+    color: black;
+}
+
+.menu-text>a:hover {
+    color: black;
 }
 
 .row.collapse>.column,
@@ -1643,7 +1526,7 @@ a {
 
 a:focus,
 a:hover {
-    color: #1c5e8a;
+    color: #1585cf
 }
 
 a img {
@@ -2027,8 +1910,8 @@ p+.stat {
 
 .button.hollow:focus,
 .button.hollow:hover {
-    border-color: #145A7C;
-    color: #145A7C
+    border-color: rgb(15, 69, 95);
+    color: rgb(15, 69, 95)
 }
 
 .button.hollow.primary {
@@ -2038,8 +1921,8 @@ p+.stat {
 
 .button.hollow.primary:focus,
 .button.hollow.primary:hover {
-    border-color: #145A7C;
-    color: #145A7C
+    border-color: rgb(15, 69, 95);
+    color: rgb(15, 69, 95)
 }
 
 .button.hollow.secondary {

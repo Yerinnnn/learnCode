@@ -38,46 +38,25 @@
     margin: 20px;
 }
 
-@media (min-width:40em) {
+@media (max-width:63em) {
     .vertical-menu {
         margin: 10px;
         /* flex-direction: column; */
-    }
-
-    .vertical-menu a.active {
-        background-color: #145A7C;
-        font-size: 30px;
-        display: table-cell;
-        vertical-align: middle;
     }
 }
 
 @media (max-width:39.9375em) {
     .vertical-menu {
-        margin: 5px;
+        margin: 10px;
     }
 
     .vertical-menu a.active {
         background-color: #145A7C;
         font-size: 16px;
-        /* width: 350px;
-        height: 40px; */
         display: table-cell;
         vertical-align: middle;
     }
 }
-
-/* @media screen and (min-width: 40em) {
-    .vertical-menu a.active {
-      font-size: 30px;
-    }
-  }
-  
-  @media screen and (max-width: 39.9375em) {
-    .vertical-menu a.active {
-      font-size: 16px;
-    }
-  } */
 
 .vertical-menu a {
     background-color: #eee;

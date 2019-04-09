@@ -8,8 +8,7 @@
     <title>learn Code</title>
 
     <link rel="stylesheet" href="css/login.css">
-    <script src="js/login.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- <script src="js/login.js"></script> -->
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
 </head>
 
@@ -19,11 +18,12 @@
             <div class="login-page-title">
                 <h1><a href='index.jsp'>logo</a></h1>
             </div>
-            <form class="login-form" method="post" action="loginAction.jsp">
-                <input type="text" placeholder="username" maxlength="15"/>
-                <input type="password" placeholder="password" maxlength="15"/>
-                <input type="submit" class="button" value="login">
-                <p class="message">Not registered? <a href="register.jsp">Create an account</a></p>
+            <form class="register-form" method="post" action="registerAction.jsp">
+                <input type="text" placeholder="name" />
+                <input type="password" placeholder="password" />
+                <input class="email_address" type="text" placeholder="email address" />
+                <input type="submit" class="button" value="create">
+                <p class="message">Already registered? <a href="login.jsp">Sign In</a></p>
             </form>
         </div>
     </div>

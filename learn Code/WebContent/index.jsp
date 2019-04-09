@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -9,7 +11,7 @@
 </head>
 
 <body>
-  <!-- header ë¶€ë¶„ -->
+  <!-- header ºÎºÐ -->
   <div class="title-bar" data-responsive-toggle="realEstateMenu" data-hide-for="small">
     <button class="menu-icon" type="button" data-toggle></button>
     <div class="title-bar-title">Menu</div>
@@ -19,7 +21,7 @@
       <ul class="menu" data-responsive-menu="accordion">
         <li class="menu-text"><a href="main.jsp">learn Code</a></li>
         <li><a href="#">code</a></li>
-        <li><a href="">roadmap</a></li>
+        <li><a href="#">roadmap</a></li>
         <li class="search"><a href="#"><image class="search_icon" src="images/search.png"></image></a></li>
       </ul>
     </div>
@@ -32,7 +34,7 @@
     </div>
   </div>
 
-  <!-- ì†Œê°œê¸€ ë¶€ë¶„ -->
+  <!-- ¼Ò°³±Û ºÎºÐ -->
   <br>
   <div class="row">
     <div class="medium-7 large-6 columns">
@@ -57,7 +59,7 @@
             </div>
             <div class="small-12 columns">
               <label>Find Your Dream Language
-                <!-- type number ë°”ê¾¸ê¸° -->
+                <!-- type number ¹Ù²Ù±â -->
                 <input type="number" placeholder="Moons required">
               </label>
               <button type="submit" class="button">Search Now!</button>
@@ -72,16 +74,16 @@
     <hr>
   </div>
 
-  <!-- main ë¶€ë¶„ -->
+  <!-- main ºÎºÐ -->
   <div class="row column">
     <p class="lead">Trending Planetary Destinations</p>
   </div>
   <div class="row small-up-1 medium-up-2 large-up-3">
     <div class="column">
       <div class="callout">
-        <!-- ì–¸ì–´ ì´ë¦„ -->
+        <!-- ¾ð¾î ÀÌ¸§ -->
         <p>HTML</p>
-        <!-- ì½”ë“œ ë¯¸ë¦¬ë³´ê¸° ì‚¬ì§„ ë„£ìœ¼ë©´ ì–´ë–¨ê¹Œ -->
+        <!-- ÄÚµå ¹Ì¸®º¸±â »çÁø ³ÖÀ¸¸é ¾î¶³±î -->
         <p><img src="https://placehold.it/400x370&text=Pegasi B" alt="image of a planet called Pegasi B"></p>
         <p class="lead">Copernican Revolution caused an uproar</p>
         <p class="subheader">Find Earth-like planets life outside the Solar System</p>
@@ -129,12 +131,12 @@
     </div>
   </div>
 
-  <!-- load ë²„íŠ¼ -->
+  <!-- load ¹öÆ° -->
   <div class="row column">
     <a class="button hollow expanded">Load More</a>
   </div>
 
-  <!-- footer ë¶€ë¶„ -->
+  <!-- footer ºÎºÐ -->
   <footer>
     <div class="row expanded callout secondary">
       <div class="small-6 large-3 columns">
@@ -175,7 +177,7 @@
       </div>
     </div>
 
-    <!-- ê¸°íƒ€ ë¶€ë¶„ -->
+    <!-- ±âÅ¸ ºÎºÐ -->
     <div class="row">
       <div class="medium-6 columns">
         <ul class="menu">
@@ -194,7 +196,7 @@
 
   <!-- script -->
 
-  <!-- load more ë²„íŠ¼ ëˆ„ë¥´ë©´ ë” ë‚˜ì˜¤ê²Œ -->
+  <!-- load more ¹öÆ° ´©¸£¸é ´õ ³ª¿À°Ô -->
   <!-- see load map -->
   <!-- start a free trial -->
   <!-- login -->
