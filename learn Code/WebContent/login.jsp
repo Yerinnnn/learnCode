@@ -22,8 +22,8 @@
                 <h1><a href='index.jsp'>logo</a></h1>
             </div>
             <form class="login-form" method="post" action="loginAction.jsp">
-                <input type="text" placeholder="username" maxlength="15"/>
-                <input type="password" placeholder="password" maxlength="15"/>
+                <input type="text" placeholder="username" name="username" maxlength="15"/>
+                <input type="password" placeholder="password" name="password" maxlength="15"/>
                 <input type="submit" class="button" value="login">
                 <p class="message">Not registered? <a href="register.jsp">Create an account</a></p>
             </form>
