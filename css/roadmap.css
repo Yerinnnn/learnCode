@@ -122,6 +122,9 @@
     background-color: rgb(19, 33, 39);
 }
 
+
+
+
 .menu {
     user-select: none;
 }
@@ -132,18 +135,6 @@
 
 .menu-text>a:hover {
     color: black;
-}
-
-button,
-img,
-legend {
-    border: 0
-}
-
-body,
-button,
-legend {
-    padding: 0
 }
 
 .row.collapse>.column,
@@ -1643,7 +1634,7 @@ a {
 
 a:focus,
 a:hover {
-    color: #1c5e8a;
+    color: rgb(15, 69, 95)
 }
 
 a img {
@@ -1936,7 +1927,7 @@ p+.stat {
 
 .button:focus,
 .button:hover {
-    background: #1583cc;
+    background: rgb(15, 69, 95);
     color: #fff
 }
 
@@ -1966,7 +1957,7 @@ p+.stat {
 
 .button.primary:focus,
 .button.primary:hover {
-    background: #147cc0;
+    background: rgb(15, 69, 95);
     color: #fff
 }
 
@@ -2027,8 +2018,8 @@ p+.stat {
 
 .button.hollow:focus,
 .button.hollow:hover {
-    border-color: #145A7C;
-    color: #145A7C
+    border-color: rgb(15, 69, 95);
+    color: rgb(15, 69, 95)
 }
 
 .button.hollow.primary {
@@ -2038,8 +2029,8 @@ p+.stat {
 
 .button.hollow.primary:focus,
 .button.hollow.primary:hover {
-    border-color: #145A7C;
-    color: #145A7C
+    border-color: rgb(15, 69, 95);
+    color: rgb(15, 69, 95)
 }
 
 .button.hollow.secondary {
@@ -2712,7 +2703,7 @@ screen and (min-width:75em) {
 
 .button-group.primary .button:focus,
 .button-group.primary .button:hover {
-    background: #147cc0;
+    background: rgb(15, 69, 95);
     color: #fff
 }
 
@@ -3296,7 +3287,7 @@ screen and (min-width:75em) {
 .menu-text {
     color: inherit;
     line-height: 1;
-    padding: .7rem 1rem
+    /* padding: .7rem 1rem */
 }
 
 body,
@@ -3709,7 +3700,7 @@ html {
 }
 
 .slider-handle:hover {
-    background-color: #1583cc
+    background-color: #378BB5
 }
 
 .slider-handle.is-dragging {
@@ -4120,7 +4111,7 @@ table.hover tr:nth-of-type(even):hover {
 
 .tabs.primary>li>a:focus,
 .tabs.primary>li>a:hover {
-    background: #1893e4
+    background: #378BB5
 }
 
 .tabs-title>a {
@@ -4174,9 +4165,9 @@ table.hover tr:nth-of-type(even):hover {
 }
 
 .title-bar {
-    background: #0a0a0a;
+    background: #378BB5;
     color: #fefefe;
-    padding: .5rem
+    padding: .3rem
 }
 
 .title-bar::after,
@@ -4253,7 +4244,7 @@ table.hover tr:nth-of-type(even):hover {
 }
 
 .has-tip {
-    border-bottom: dotted 1px #8a8a8a;
+    border-bottom: dotted 1px #1a0404;
     position: relative;
     display: inline-block
 }
@@ -4359,4 +4350,3 @@ table.hover tr:nth-of-type(even):hover {
     .top-bar-right {
         float: right
     }
-}
