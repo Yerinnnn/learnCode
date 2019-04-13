@@ -22,7 +22,11 @@
         <li class="menu-text"><a href="main.jsp">learn Code</a></li>
         <li><a href="#">code</a></li>
         <li><a href="#">roadmap</a></li>
+        <li><a href="#">board</a></li>
         <li class="search"><a href="#"><image class="search_icon" src="images/search.png"></image></a></li>
+        
+        
+        
       </ul>
     </div>
     <div class="top-bar-right">

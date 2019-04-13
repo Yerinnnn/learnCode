@@ -52,9 +52,22 @@ public class UserDAO {
 		}
 		return -2; // 데이터베이스 오류
 	}
-//private PreparedStatement setString(int i, String username) {
-//	// TODO Auto-generated method stub
-//	return null;
-//}
+
+	
+	public int register(User user) {   //user 클래스를 이용한 인스턴스, 한 명의 정보를 입력받을 수 있도록
+		String SQL = "INSERT INTO USER VALUES (?, ?, ?);";
+		try {
+			pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, user.getUsername());
+			pstmt.setString(2, user.getPassword());
+			pstmt.setString(3, user.getEmail());
+			return pstmt.executeUpdate();   //해당 statement의 실행은 그 결과를 넣을 수 있도록 합니다
+			//insert 문에서는 무조건 0 이상의 숫자가 반환되기 때문에 -1만 아니라면 모두 성공
+		}
+		catch (Exception e){
+			e.printStackTrace();
+		}
+		return -1;	//데이터베이스 오류
+	}
 	
 }

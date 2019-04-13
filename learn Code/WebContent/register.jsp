@@ -21,9 +21,9 @@
                 <h1><a href='index.jsp'>logo</a></h1>
             </div>
             <form class="register-form" method="post" action="registerAction.jsp">
-                <input type="text" placeholder="name" />
-                <input type="password" placeholder="password" />
-                <input class="email_address" type="text" placeholder="email address" />
+                <input type="text" placeholder="name" name="username" maxlength="15" />
+                <input type="password" placeholder="password" name="password" maxlength="15" />
+                <input class="email_address" type="email" placeholder="email address" />
                 <input type="submit" class="button" value="create">
                 <p class="message">Already registered? <a href="login.jsp">Sign In</a></p>
             </form>
