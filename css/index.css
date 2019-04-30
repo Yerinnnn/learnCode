@@ -2387,7 +2387,7 @@ screen and (min-width:75em) {
     content: ' ';
     display: table
 }
-
+/* 
 .accordion {
     background: #fefefe;
     border: 1px solid #e6e6e6;
@@ -2457,7 +2457,7 @@ screen and (min-width:75em) {
     -webkit-transform: scaleY(-1);
     -ms-transform: scaleY(-1);
     transform: scaleY(-1)
-}
+} */
 
 .badge {
     display: inline-block;
@@ -2807,7 +2807,7 @@ screen and (min-width:75em) {
     margin-top: -6px;
     right: 1rem
 }
-
+/* 
 .js-drilldown-back::before {
     border: 6px inset;
     border-color: transparent #378BB5 transparent transparent;
@@ -2816,7 +2816,7 @@ screen and (min-width:75em) {
     margin-right: .75rem;
     margin-left: .6rem;
     margin-top: 14px
-}
+} */
 
 .dropdown-pane {
     background-color: #fefefe;
@@ -2860,7 +2860,7 @@ screen and (min-width:75em) {
     position: relative
 }
 
-.dropdown.menu .has-submenu.is-down-arrow>a::after {
+/* .dropdown.menu .has-submenu.is-down-arrow>a::after {
     content: '';
     display: block;
     width: 0;
@@ -2871,8 +2871,8 @@ screen and (min-width:75em) {
     position: absolute;
     top: 12px;
     right: 5px
-}
-
+} */
+/* 
 .dropdown.menu .has-submenu.is-left-arrow>a::after {
     content: '';
     display: block;
@@ -2884,13 +2884,13 @@ screen and (min-width:75em) {
     float: left;
     margin-left: 0;
     margin-right: 10px
-}
+} */
 
 .is-dropdown-menu.vertical.align-right,
 .menu.align-right>li {
     float: right
 }
-
+/* 
 .dropdown.menu .has-submenu.is-right-arrow>a::after {
     content: '';
     display: block;
@@ -2899,7 +2899,7 @@ screen and (min-width:75em) {
     border: 5px inset;
     border-color: transparent transparent transparent #378BB5;
     border-left-style: solid
-}
+} */
 
 .dropdown.menu .has-submenu.is-left-arrow.opens-inner .submenu {
     right: 0;
@@ -3944,7 +3944,7 @@ tbody tr:nth-child(even) {
     }
 }
 
-.tabs,
+/* .tabs,
 .tabs-content {
     border: 1px solid #e6e6e6
 }
@@ -3986,13 +3986,13 @@ table.hover tr:nth-of-type(even):hover {
     width: auto;
     float: none;
     display: block
-}
+} */
 
 .tabs-title,
 .title-bar-left {
     float: left
 }
-
+/* 
 .tabs.primary {
     background: #378BB5
 }
@@ -4038,7 +4038,7 @@ table.hover tr:nth-of-type(even):hover {
 
 .tabs-panel.is-active {
     display: block
-}
+} */
 
 .thumbnail {
     border: 4px solid #fefefe;
