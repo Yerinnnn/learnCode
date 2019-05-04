@@ -18,11 +18,13 @@
 <!-- UserDAO의 username과 password가 여기로 넘어와서 login 시도 -->
 <!-- DAO에서 구현한 return -1 부터 0까지의 처리결과가 result에 담기는 것 -->
    <%
-        String userID = null;
-        if(session.getAttribute("userID") != null) {
-        	userID = (String)session.getAttribute("userID");
+        String username = null;
+   
+        if(session.getAttribute("username") != null) {
+        	username = (String) session.getAttribute("username");   //정상적으로 username이라는 변수가 자신에게 할당된 세션 username을 담을 수 있도록
+        	 
         }
-        if (userID != null) {
+        if (username != null) {			//로그인 된 사람들은 또 다시 로그인 하지 못하도록
         	PrintWriter script = response.getWriter();
         	script.println("<script>");
         	script.println("alert('이미 로그인이 되어있습니다.')");
@@ -32,7 +34,7 @@
         UserDAO userDAO = new UserDAO();
         int result = userDAO.login(user.getUsername(),user.getPassword());
         if (result == 1) {
-        	session.setAttribute("userID", user.getUsername());
+        	session.setAttribute("username", user.getUsername());
         	PrintWriter script = response.getWriter();
         	script.println("<script>");
         	script.println("location.href = 'main.jsp'");

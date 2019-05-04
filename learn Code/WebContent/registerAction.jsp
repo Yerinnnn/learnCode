@@ -1,41 +1,44 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ page import="user.UserDAO" %>
 <%@ page import="java.io.PrintWriter" %>
-<% request.setCharacterEncoding("UTF-8"); %>    <!--°Ç³Ê¿À´Â ¸ğµç µ¥ÀÌÅÍ¸¦ utf-8À¸·Î ÀÎÄÚµù -->
-<!-- scope="page": ÇöÀç ÆäÀÌÁö¿¡¼­¸¸ ÀÚ¹Ù ºóÁî »ç¿ë -->
+<% request.setCharacterEncoding("UTF-8"); %>    <!--ê±´ë„ˆì˜¤ëŠ” ëª¨ë“  ë°ì´í„°ë¥¼ utf-8ìœ¼ë¡œ ì¸ì½”ë”© -->
+<!-- scope="page": í˜„ì¬ í˜ì´ì§€ì—ì„œë§Œ ìë°” ë¹ˆì¦ˆ ì‚¬ìš© -->
 <jsp:useBean id="user" class="user.User" scope="page"/>
 <jsp:setProperty property="username" name="user"/>
 <jsp:setProperty property="password" name="user"/>
 <jsp:setProperty property="email" name="user"/>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>learn Code</title>
 </head>
 <body>
-<!-- userDAO Å¬·¡½º¸¦ ÀÌ¿ëÇØ ·Î±×ÀÎ ÀÛ¾÷ Ã³¸® -->
-<!-- UserDAOÀÇ username°ú password°¡ ¿©±â·Î ³Ñ¾î¿Í¼­ login ½Ãµµ -->
-<!-- DAO¿¡¼­ ±¸ÇöÇÑ return -1 ºÎÅÍ 0±îÁöÀÇ Ã³¸®°á°ú°¡ result¿¡ ´ã±â´Â °Í -->
+<!-- userDAO í´ë˜ìŠ¤ë¥¼ ì´ìš©í•´ ë¡œê·¸ì¸ ì‘ì—… ì²˜ë¦¬ -->
+<!-- UserDAOì˜ usernameê³¼ passwordê°€ ì—¬ê¸°ë¡œ ë„˜ì–´ì™€ì„œ login ì‹œë„ -->
+<!-- DAOì—ì„œ êµ¬í˜„í•œ return -1 ë¶€í„° 0ê¹Œì§€ì˜ ì²˜ë¦¬ê²°ê³¼ê°€ resultì— ë‹´ê¸°ëŠ” ê²ƒ -->
    <%  
-   		if (user.getUsername == null || user.getPassword == null || user.getEmail == null) {
-   			PrintWriter script = response.getWriter();
-        	script.println("<script>");
-        	script.println("alert('ÀÔ·ÂµÇÁö ¾ÊÀº »çÇ×ÀÌ ÀÖ½À´Ï´Ù.')");
-        	script.println("location.href = 'main.jsp'");
-        	script.println("</script>");
-   		} else {
+   		if (user.getUsername() == null || user.getPassword() == null || user.getEmail() == null) {
+			PrintWriter script = response.getWriter();
+   			script.println("<script>");
+   			script.println("alert('ì…ë ¥ë˜ì§€ ì•Šì€ ì‚¬í•­ì´ ìˆìŠµë‹ˆë‹¤.')");
+ 		  	script.println("history.back()");
+ 		  	script.println("</script>");
+		}  else {
    			UserDAO userDAO = new UserDAO();
    	        int result = userDAO.register(user);
-   	        if (result == -1) {
-   	        	session.setAttribute("userID", user.getUsername());
+   	        
+   	        if (result == -1) {     //database usernameì— primary key ì²˜ë¦¬ë¥¼ í•´ë†“ì•˜ê¸° ë•Œë¬¸ì— ë§Œì•½ ê°’ì´ ìˆë‹¤ë©´ -1ì´ ì•„ë‹Œ 0~ì–‘ìˆ˜ ê°’ì´ ë‚˜ì˜´
    	        	PrintWriter script = response.getWriter();
    	        	script.println("<script>");
-   	        	script.println("ÀÌ¹Ì Á¸ÀçÇÏ´Â ¾ÆÀÌµğÀÔ´Ï´Ù.");
+   	        	script.println("alert('ì´ë¯¸ ì¡´ì¬í•˜ëŠ” ì•„ì´ë””ì…ë‹ˆë‹¤.')");
+   	        	script.println("location.href = 'register.jsp'");
    	        	script.println("</script>");
    	        }
    	        else {
+   	        	session.setAttribute("username", user.getUsername());
    	        	PrintWriter script = response.getWriter();
    	        	script.println("<script>");
    	        	script.println("location.href = 'main.jsp'");
