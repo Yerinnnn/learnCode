@@ -1,0 +1,11 @@
+.side-bar-left {
+    float: left;
+}
+
+.side-bar-left a {
+    text-decoration: none;
+}
+
+.side-contents {
+    height: 500px;
+}

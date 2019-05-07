@@ -31,7 +31,7 @@
         <li><a href="#">code</a></li>
         <li><a href="#">roadmap</a>
 			<ul id="sub-menu">
-                <li><a href="roadmap/webDeveloper_roadmap.jsp" area-label="sub-menu">웹개발자</a></li>
+                <li><a href="webDeveloper_roadmap.jsp" area-label="sub-menu">웹개발자</a></li>
                 <li><a href="#" area-label="sub-menu">보안</a></li>
                 <li><a href="#" area-label="sub-menu">인공지능</a></li>
             </ul>
@@ -73,107 +73,8 @@
     	}
   %>
 
-  <!-- 소개글 부분 -->
-  <br>
-  <div class="row">
-    <div class="medium-7 large-6 columns">
-      <h1>Close Your Eyes and Open Your Mind</h1>
-      <p class="subheader">There is beauty in space, and it is orderly. There is no weather, and there is regularity. It
-        is predictable. Everything in space obeys the laws of physics. If you know these laws, and obey them, space will
-        treat you kindly.</p>
-      <button class="button">See Road Map</button>
-      <button class="button">Start a free trial</button>
-    </div>
-    <div class="show-for-large large-3 columns">
-      <img src="https://placehold.it/400x370&text=PSR1257 + 12 C" alt="picture of space">
-    </div>
-    <div class="medium-5 large-3 columns">
-      <div class="callout secondary">
-        <form>
-          <div class="row">
-            <div class="small-12 columns">
-              <label>Find Your Dream Code
-                <input type="text" placeholder="Search destinations">
-              </label>
-            </div>
-            <div class="small-12 columns">
-              <label>Find Your Dream Language
-                <!-- type number 바꾸기 -->
-                <input type="number" placeholder="Moons required">
-              </label>
-              <button type="submit" class="button">Search Now!</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <div class="row column">
-    <hr>
-  </div>
-
-  <!-- main 부분 -->
-  <div class="row column">
-    <p class="lead">Trending Planetary Destinations</p>
-  </div>
-  <div class="row small-up-1 medium-up-2 large-up-3">
-    <div class="column">
-      <div class="callout">
-        <!-- 언어 이름 -->
-        <p>HTML</p>
-        <!-- 코드 미리보기 사진 넣으면 어떨까 -->
-        <p><img src="https://placehold.it/400x370&text=Pegasi B" alt="image of a planet called Pegasi B"></p>
-        <p class="lead">Copernican Revolution caused an uproar</p>
-        <p class="subheader">Find Earth-like planets life outside the Solar System</p>
-      </div>
-    </div>
-    <div class="column">
-      <div class="callout">
-        <p>JAVA</p>
-        <p><img src="https://placehold.it/400x370&text=Pegasi B" alt="image of a planet called Pegasi B"></p>
-        <p class="lead">Copernican Revolution caused an uproar</p>
-        <p class="subheader">Find Earth-like planets life outside the Solar System</p>
-      </div>
-    </div>
-    <div class="column">
-      <div class="callout">
-        <p>C/C++/C#</p>
-        <p><img src="https://placehold.it/400x370&text=Pegasi B" alt="image of a planet called Pegasi B"></p>
-        <p class="lead">Copernican Revolution caused an uproar</p>
-        <p class="subheader">Find Earth-like planets life outside the Solar System</p>
-      </div>
-    </div>
-    <div class="column">
-      <div class="callout">
-        <p>JAVA</p>
-        <p><img src="https://placehold.it/400x370&text=Pegasi B" alt="image of a planet called Pegasi B"></p>
-        <p class="lead">Copernican Revolution caused an uproar</p>
-        <p class="subheader">Find Earth-like planets life outside the Solar System</p>
-      </div>
-    </div>
-    <div class="column">
-      <div class="callout">
-        <p>HTML</p>
-        <p><img src="https://placehold.it/400x370&text=Pegasi B" alt="image of a planet called Pegasi B"></p>
-        <p class="lead">Copernican Revolution caused an uproar</p>
-        <p class="subheader">Find Earth-like planets life outside the Solar System</p>
-      </div>
-    </div>
-    <div class="column">
-      <div class="callout">
-        <p>JAVA</p>
-        <p><img src="https://placehold.it/400x370&text=Pegasi B" alt="image of a planet called Pegasi B"></p>
-        <p class="lead">Copernican Revolution caused an uproar</p>
-        <p class="subheader">Find Earth-like planets life outside the Solar System</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- load 버튼 -->
-  <div class="row column">
-    <a class="button hollow expanded">Load More</a>
-  </div>
+  <!-- roadmap 부분 -->
+  
 
   <!-- footer 부분 -->
   <footer>
@@ -240,7 +141,6 @@
   <!-- start a free trial -->
   <!-- login -->
   <!-- search now -->
-  
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
   <script>

@@ -1,5 +1,29 @@
 @charset "UTF-8";
+#sub-menu {
+    position: absolute;
+    display: none;
+    background-color: #378BB5;
+    opacity: 0;
+    /* visibility: hidden; */
+}
 
+#sub-menu >li {
+    padding: 16px 28px;
+    border-bottom: 1px solid yellowgreen;
+
+}
+
+#sub-menu > li > a {
+    color: white;
+    text-decoration: none;
+
+}
+
+#main-menu > li:hover #sub-menu {
+    opacity: 1;
+    display: block;
+    /* visibility: visible; */
+}
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 .search_icon {
     width: 24px;
