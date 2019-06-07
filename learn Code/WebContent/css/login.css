@@ -1,15 +1,34 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+/* @import url(https://fonts.googleapis.com/css?family=Roboto:300); */
+@import url("https://fonts.googleapis.com/css?family=Oleo+Script:400|Open+Sans:300,300italic,600,600italic,800");
+@import url("font-awesome.min.css");
 
 .login-page {
   width: 360px;
   padding: 8% 0 0;
   margin: auto;
+  backface-visibility: hidden;
+}
+#logo h1 {
+			background: #ff4486;
+			border-radius: 6px;
+			font-family: 'Oleo Script', serif;
+			font-weight: 400;
+			padding: 0em 0.2em 0em 0.2em;
+			font-size: 2.7em;
+			letter-spacing: 0.05em;
+			display: inline-block;
+			vertical-align: middle;
+		}
+#logo h1 a {
+  text-decoration: none;	
+  color: #fff;
 }
 .form {
   position: relative;
   z-index: 1;
   background: #FFFFFF;
   max-width: 360px;
+  border-radius: 8px;
   margin: 0 auto 100px;
   padding: 45px;
   text-align: center;
@@ -17,33 +36,40 @@
 }
 .form input {
   /* font-family: "Roboto", sans-serif; */
-  font-family: "Gothic";
+  font-family: 'Open Sans', sans-serif;
   outline: 0;
   background: #f2f2f2;
   width: 100%;
   border: 0;
+  border-radius: 8px;
   margin: 0 0 15px;
   padding: 15px;
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 800;
 }
 .form .button {
   /* font-family: "Roboto", sans-serif; */
-  font-family: "Gothic";
+  /* font-family: "Gothic"; */
+  font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #378BB5;
+  background: #0090c5;
   width: 100%;
   border: 0;
   padding: 15px;
   color: #FFFFFF;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
+  font-size: 1em;
+  font-weight: 800;
+  transition: 0.25s;
   cursor: pointer;
 }
 .form .button:hover,.form .button:active,.form .button:focus {
   background: #1c5e8a;
+}
+.form .button:hover {
+	transition: 0.25s, 0.25s;
+	background: #10a0d5;
 }
 .form .message {
   margin: 15px 0 0;
@@ -91,12 +117,9 @@
   color: #EF3B3A;
 }
 body {
-  background: #378BB5; /* fallback for old browsers */
-  background: -webkit-linear-gradient(right, #378BB5, rgb(60, 123, 155));
-  background: -moz-linear-gradient(right, #378BB5, rgb(60, 123, 155));
-  background: -o-linear-gradient(right, #378BB5, rgb(60, 123, 155));
-  background: linear-gradient(to left, #378BB5, rgb(60, 123, 155));
-  font-family: "Gothic";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;      
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
+  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
+  background-image: linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0)), url("images/bg01.png");
+  background-color: #f7f7f7; 
 }

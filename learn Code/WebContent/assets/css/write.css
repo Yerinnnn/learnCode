@@ -1,0 +1,22 @@
+.subject label {
+    display: inline-block;
+}
+
+.subject div {
+    display: inline-block;
+}
+
+.subject li {
+    display: block;
+}
+
+.item {
+    width: 68px;
+    font-weight: bold;
+    color: rgb(68, 68, 68);
+    font-size: 12px;
+}
+
+option {
+    padding: 0 1em;
+}

@@ -68,7 +68,6 @@
         <!-- <li><a class="button" href="">Logout</a></li> -->
       </ul>
     </div>
-  </div>
   <%
     	}
   %>

@@ -20,6 +20,18 @@
 <!-- UserDAO의 username과 password가 여기로 넘어와서 login 시도 -->
 <!-- DAO에서 구현한 return -1 부터 0까지의 처리결과가 result에 담기는 것 -->
    <%  
+   		String username = null;
+		if (session.getAttribute("username") != null) {
+			username = (String) session.getAttribute("username");
+		}
+		if (username != null) {
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+       		script.println("alert('이미 로그인이 되어 있습니다.')");
+       		script.println("location.href = 'login.jsp'");
+       		script.println("</script>");
+		}
+		
    		if (user.getUsername() == null || user.getPassword() == null || user.getEmail() == null) {
 			PrintWriter script = response.getWriter();
    			script.println("<script>");
@@ -41,7 +53,7 @@
    	        	session.setAttribute("username", user.getUsername());
    	        	PrintWriter script = response.getWriter();
    	        	script.println("<script>");
-   	        	script.println("location.href = 'main.jsp'");
+   	        	script.println("location.href = 'index2.jsp'");
    	        	script.println("</script>");
    	        }
    		}

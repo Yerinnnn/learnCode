@@ -1,11 +1,25 @@
 .side-bar-left {
-    float: left;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
 }
 
 .side-bar-left a {
+    padding: 6px 6px 6px 32px;
     text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
 }
 
-.side-contents {
-    height: 500px;
+
+.side-bar-left div:hover {
+    background-color: #818181;
+    color: #f1f1f1;
 }

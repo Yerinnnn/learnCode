@@ -12,7 +12,7 @@
    		session.invalidate();	//현재 이 페이지에 접속한 회원이 세션을 빼앗기도록 만들어서 로그아웃 시켜줌
    %>
    <script>
-   		location.href = 'main.jsp';	
+   		location.href = 'index2.jsp';	
    </script>
 </body>
 </html>

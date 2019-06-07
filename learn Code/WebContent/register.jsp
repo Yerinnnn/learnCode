@@ -17,8 +17,8 @@
 <body>
     <div class="login-page">
         <div class="form">
-            <div class="login-page-title">
-                <h1><a href='index.jsp'>logo</a></h1>
+            <div class="login-page-title" id="logo">
+                <h1><a href='index2.jsp'>learn Code</a></h1>
             </div>
             <form class="register-form" method="post" action="registerAction.jsp">
                 <input type="text" placeholder="name" name="username" maxlength="15" />
