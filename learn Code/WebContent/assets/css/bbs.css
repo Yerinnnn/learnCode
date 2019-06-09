@@ -1,70 +1,95 @@
 .bbs-list-item {
-    border-bottom: 0.5px solid rgb(156, 156, 156);
-    padding: 30px 20px;
-    width: 100%;
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    /* outline: none; */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	border-top: 0.5px solid rgb(156, 156, 156);
+	padding: 30px 20px;
+	width: 100%;
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	/* outline: none; */
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bbs-list-item-last {
+	border-top: 0.5px solid rgb(156, 156, 156);
+	width: 100%;
+	display: table;
 }
 
 .bbs-list-item:hover {
-    /* background: rgb(245, 245, 245); */
-    cursor: pointer;
+	/* background: rgb(245, 245, 245); */
+	cursor: pointer;
 }
 
 .bbs-description {
-    margin-bottom: 80px;
+	margin-bottom: 80px;
 }
 
 .item-main {
-    float: left;
-    display: inline-block;
+	float: left;
+	display: inline-block;
+}
+
+.item-number {
+	color: black;
 }
 
 .item-title {
-    font-size: 23px;
-    font-weight: 400;
-    color: rgb(0, 0, 0);
-    margin-right: 7px;
-    cursor: pointer;
-    max-width: 400px;
+	font-size: 23px;
+	font-weight: 400;
+	color: rgb(0, 0, 0);
+	margin-right: 7px;
+	cursor: pointer;
+	max-width: 400px;
 }
 
 .item-title:hover {
-    color: rgb(189, 188, 188);
-    transition: 0.3s;
+	color: rgb(189, 188, 188);
+	transition: 0.3s;
 }
 
 .item-username {
-    font-size: 15px;
-    font-weight: inherit;
-    color: rgb(80, 80, 80);
-    margin-right: 7px;
-    cursor: pointer;
+	font-size: 15px;
+	font-weight: inherit;
+	color: rgb(80, 80, 80);
+	margin-right: 7px;
+	cursor: pointer;
 }
 
 .item-date {
-    font-size: 15px;
-    font-weight: inherit;
-    color: rgb(39, 39, 39);
-    margin-top: 5px;
-    margin-bottom: 5px;
-    cursor: pointer;
+	font-size: 15px;
+	font-weight: inherit;
+	color: rgb(39, 39, 39);
+	margin-top: 5px;
+	margin-bottom: 5px;
+	cursor: pointer;
 }
 
 .item-sub {
-    float: right;
+	float: right;
+	line-height: 6em;
 }
 
 .item-count {
-    display: inline-block;
+	display: inline-block;
 }
 
 .item-like {
-    display: inline-block;
-    float: right;
-    margin-left: 15px;
+	display: inline-block;
+	float: right;
+	margin-left: 15px;
+}
+
+#delete-button {
+	margin-right: 0.5em;
+	top: 0.05em;
+	background: #FF0000;
+	text-align: center;
+	font-size: 1.25em;
+	padding: 0.65em 0.86;
+}
+
+#delete-button:hover {
+	background: #C2C2C2;
+	background: rgba(0, 0, 0, 0 .1);
 }

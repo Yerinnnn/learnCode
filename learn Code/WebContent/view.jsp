@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="java.io.PrintWriter"%>
+<%@ page import="bbs.Bbs"%>
+<%@ page import="bbs.free_BbsDAO"%>
 <!DOCTYPE HTML>
 <!--
 	Verti by HTML5 UP
@@ -15,7 +17,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
-<link rel="stylesheet" href="assets/css/write.css">
+<link rel="stylesheet" href="assets/css/bbs.css">
 </head>
 
 <body class="is-preload homepage">
@@ -24,6 +26,18 @@
 		if (session.getAttribute("username") != null) {
 			username = (String) session.getAttribute("username");
 		}
+		int bbsID = 0;
+		if (request.getParameter("bbsID") != null) {
+			bbsID = Integer.parseInt(request.getParameter("bbsID"));
+		}
+		if (bbsID == 0) {
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("alert('유효하지 않은 글입니다.')");
+			script.println("location.href = 'bbs.jsp");
+			script.println("</script>");
+		}
+		Bbs bbs = new free_BbsDAO().getBbs(bbsID);
 	%>
 	<div id="page-wrapper">
 
@@ -50,7 +64,7 @@
 								<li><a href="#">보안 전문가 로드맵</a></li>
 								<li><a href="#">#</a></li>
 							</ul></li>
-						<li><a href="#">board</a>
+						<li><a href="#" id="active">board</a>
 							<ul>
 								<li><a href="bbs.jsp">자유 게시판</a></li>
 								<li><a href="#">취업/진로 게시판</a></li>
@@ -128,10 +142,10 @@
 							<section>
 								<h3>Subheading</h3>
 								<ul class="style2">
-									<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-									<li><a href="#">Ornare in hendrerit in lectus</a></li>
-									<li><a href="#">Semper mod quis eget mi dolore</a></li>
-									<li><a href="#">Quam turpis feugiat sit dolor</a></li>
+									<li><a href="#">HTML5</a></li>
+									<li><a href="#">JAVA</a></li>
+									<li><a href="#">C, C#, C++</a></li>
+									<li><a href="#">Python</a></li>
 									<li><a href="#">Amet ornare in hendrerit in lectus</a></li>
 									<li><a href="#">Semper mod quisturpis nisi</a></li>
 								</ul>
@@ -144,33 +158,44 @@
 
 							<!-- Content -->
 							<article>
-								<div class="editer-border">
-									<form method="post" action="writeAction.jsp">
-										<ul class="subject">
-											<li><label class="item" for="bbsCategory">게시판</label>
-												<div>
-													<select name="boardCategory" style="width: 200px">
-														<option value="-1">게시판 선택</option>
-														<option value="free-board">자유 게시판</option>
-														<option value="free-board">취업/진로 게시판</option>
-														<option value="free-board">QnA</option>
-													</select>
-												</div></li>
-											<li><label class="item" for="bbsTitle">제목</label>
-												<div>
-													<input type="text" name="bbsTitle" style="width: 30em"
-														maxlength="50" placeholder="게시글 제목을 입력하세요">
-												</div></li>
-											<li><textarea name="bbsContent"
-													style="width: 50em; min-width: 42em; max-width: 42em;"
-													rows="10" maxlength="2048"></textarea></li>
-										</ul>
-										<input type="submit" class="submit-button" value="Submit"
-											style="font-size: 1.2em; float: right;">
-									</form>
-
+								<div>
+									<table class="bbs-list">
+										<thead>
+											<tr class="">
+												<td style="font-weight: 400;"><%=bbs.getBbsID()%></td>
+												<td style="width:100%;text-align: left; font-weight: 700;font-size:1.4em"><%=bbs.getBbsTitle()%></td>
+											</tr>
+											<tr class="table-head">
+												<th style="font-weight: 400;text-align: left"><%=bbs.getUsername()%></th>
+												<th style="font-weight: 400;text-align: right"><%=bbs.getBbsDate()%></th>
+												<th style="font-weight: 400;text-align: right">12</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="table-content">
+												<td colspan="3" style="text-align: left;height:30em"><%=bbs.getBbsContent()%></td>
+											</tr>
+										</tbody>
+									</table>
 
 								</div>
+								<%
+									if (username != null && username.equals(bbs.getUsername())) {
+								%>
+
+								<a href="update.jsp?bbsID=<%=bbsID%>"><input type="submit"
+									class="submit-button" value="Edit"
+									style="font-size: 1em; float: left; margin-right: 5px"></a>
+								<a onclick="return confirm('정말로 삭제하시겠습니까?')" href="deleteAction.jsp?bbsID=<%=bbsID%>"><input
+									type="submit" id="delete-button" value="delete"
+									style="font-size: 1em; float: left;"> </a>
+								<%
+									}
+								%>
+								<a href="bbs.jsp"> <input type="submit"
+									class="submit-button" value="list"
+									style="font-size: 1em; float: right;">
+								</a>
 							</article>
 						</div>
 					</div>

@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="java.io.PrintWriter"%>
+<%@ page import="bbs.Bbs"%>
+<%@ page import="bbs.free_BbsDAO"%>
 <!DOCTYPE HTML>
 <!--
 	Verti by HTML5 UP
@@ -23,6 +25,32 @@
 		String username = null;
 		if (session.getAttribute("username") != null) {
 			username = (String) session.getAttribute("username");
+		}
+		if (username == null) {
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("alert('로그인 후 이용하실 수 있습니다.')");
+			script.println("location.href = 'login.jsp");
+			script.println("</script>");
+		}
+		int bbsID = 0;
+		if (request.getParameter("bbsID") != null) {
+			bbsID = Integer.parseInt(request.getParameter("bbsID"));
+		}
+		if (bbsID == 0) {
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("alert('유효하지 않은 글입니다.')");
+			script.println("location.href = 'bbs.jsp");
+			script.println("</script>");
+		}
+		Bbs bbs = new free_BbsDAO().getBbs(bbsID);
+		if (!username.equals(bbs.getUsername())) {
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("alert('권한이 없습니다.')");
+			script.println("location.href = 'bbs.jsp");
+			script.println("</script>");
 		}
 	%>
 	<div id="page-wrapper">
@@ -76,22 +104,12 @@
 								</li>
 							</ul>
 						</li> -->
-						<%
-							if (username == null) {
-						%>
-						<li class="current"><a href="login.jsp">login</a></li>
 
-						<%
-							} else {
-						%>
 						<li class="current"><a href="#">my account</a>
 							<ul>
 								<li><a href="#">my page</a></li>
 								<li><a href="logoutAction.jsp">logout</a></li>
 							</ul></li>
-						<%
-							}
-						%>
 					</ul>
 				</nav>
 
@@ -145,7 +163,7 @@
 							<!-- Content -->
 							<article>
 								<div class="editer-border">
-									<form method="post" action="writeAction.jsp">
+									<form method="post" action="updateAction.jsp?bbsID=<%= bbsID %>">
 										<ul class="subject">
 											<li><label class="item" for="bbsCategory">게시판</label>
 												<div>
@@ -159,11 +177,11 @@
 											<li><label class="item" for="bbsTitle">제목</label>
 												<div>
 													<input type="text" name="bbsTitle" style="width: 30em"
-														maxlength="50" placeholder="게시글 제목을 입력하세요">
+														maxlength="50" value="<%= bbs.getBbsTitle() %>" placeholder="게시글 제목을 입력하세요">
 												</div></li>
 											<li><textarea name="bbsContent"
 													style="width: 50em; min-width: 42em; max-width: 42em;"
-													rows="10" maxlength="2048"></textarea></li>
+													rows="10" maxlength="2048"><%= bbs.getBbsContent() %></textarea></li>
 										</ul>
 										<input type="submit" class="submit-button" value="Submit"
 											style="font-size: 1.2em; float: right;">
