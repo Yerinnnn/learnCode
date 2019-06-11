@@ -1,33 +1,33 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ page import="user.UserDAO" %>
 <%@ page import="java.io.PrintWriter" %>
-<% request.setCharacterEncoding("UTF-8"); %>    <!--°Ç³Ê¿À´Â ¸ğµç µ¥ÀÌÅÍ¸¦ utf-8À¸·Î ÀÎÄÚµù -->
-<!-- scope="page": ÇöÀç ÆäÀÌÁö¿¡¼­¸¸ ÀÚ¹Ù ºóÁî »ç¿ë -->
+<% request.setCharacterEncoding("UTF-8"); %>    <!--ê±´ë„ˆì˜¤ëŠ” ëª¨ë“  ë°ì´í„°ë¥¼ utf-8ìœ¼ë¡œ ì¸ì½”ë”© -->
+<!-- scope="page": í˜„ì¬ í˜ì´ì§€ì—ì„œë§Œ ìë°” ë¹ˆì¦ˆ ì‚¬ìš© -->
 <jsp:useBean id="user" class="user.User" scope="page"/>
 <jsp:setProperty property="username" name="user"/>
 <jsp:setProperty property="password" name="user"/>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>learn Code</title>
 </head>
 <body>
-<!-- userDAO Å¬·¡½º¸¦ ÀÌ¿ëÇØ ·Î±×ÀÎ ÀÛ¾÷ Ã³¸® -->
-<!-- UserDAOÀÇ username°ú password°¡ ¿©±â·Î ³Ñ¾î¿Í¼­ login ½Ãµµ -->
-<!-- DAO¿¡¼­ ±¸ÇöÇÑ return -1 ºÎÅÍ 0±îÁöÀÇ Ã³¸®°á°ú°¡ result¿¡ ´ã±â´Â °Í -->
+<!-- userDAO í´ë˜ìŠ¤ë¥¼ ì´ìš©í•´ ë¡œê·¸ì¸ ì‘ì—… ì²˜ë¦¬ -->
+<!-- UserDAOì˜ usernameê³¼ passwordê°€ ì—¬ê¸°ë¡œ ë„˜ì–´ì™€ì„œ login ì‹œë„ -->
+<!-- DAOì—ì„œ êµ¬í˜„í•œ return -1 ë¶€í„° 0ê¹Œì§€ì˜ ì²˜ë¦¬ê²°ê³¼ê°€ resultì— ë‹´ê¸°ëŠ” ê²ƒ -->
    <%
         String username = null;
    
         if(session.getAttribute("username") != null) {
-        	username = (String) session.getAttribute("username");   //Á¤»óÀûÀ¸·Î usernameÀÌ¶ó´Â º¯¼ö°¡ ÀÚ½Å¿¡°Ô ÇÒ´çµÈ ¼¼¼Ç usernameÀ» ´ãÀ» ¼ö ÀÖµµ·Ï
+        	username = (String) session.getAttribute("username");   //ì •ìƒì ìœ¼ë¡œ usernameì´ë¼ëŠ” ë³€ìˆ˜ê°€ ìì‹ ì—ê²Œ í• ë‹¹ëœ ì„¸ì…˜ usernameì„ ë‹´ì„ ìˆ˜ ìˆë„ë¡
         	 
         }
-        if (username != null) {			//·Î±×ÀÎ µÈ »ç¶÷µéÀº ¶Ç ´Ù½Ã ·Î±×ÀÎ ÇÏÁö ¸øÇÏµµ·Ï
+        if (username != null) {			//ë¡œê·¸ì¸ ëœ ì‚¬ëŒë“¤ì€ ë˜ ë‹¤ì‹œ ë¡œê·¸ì¸ í•˜ì§€ ëª»í•˜ë„ë¡
         	PrintWriter script = response.getWriter();
         	script.println("<script>");
-        	script.println("alert('ÀÌ¹Ì ·Î±×ÀÎÀÌ µÇ¾îÀÖ½À´Ï´Ù.')");
+        	script.println("alert('ì´ë¯¸ ë¡œê·¸ì¸ì´ ë˜ì–´ìˆìŠµë‹ˆë‹¤.')");
         	script.println("location.href = 'index2.jsp'");
         	script.println("</script>");
         }
@@ -43,21 +43,21 @@
         else if (result == 0) {
         	PrintWriter script = response.getWriter();
         	script.println("<script>");
-        	script.println("alert('ºñ¹Ğ¹øÈ£°¡ Æ²¸³´Ï´Ù.')");
+        	script.println("alert('ë¹„ë°€ë²ˆí˜¸ê°€ í‹€ë¦½ë‹ˆë‹¤.')");
         	script.println("history.back()");
         	script.println("</script>");
         }
         else if (result == -1) {
         	PrintWriter script = response.getWriter();
         	script.println("<script>");
-        	script.println("alert('Á¸ÀçÇÏÁö ¾Ê´Â ¾ÆÀÌµğÀÔ´Ï´Ù.')");
+        	script.println("alert('ì¡´ì¬í•˜ì§€ ì•ŠëŠ” ì•„ì´ë””ì…ë‹ˆë‹¤.')");
         	script.println("history.back()");
         	script.println("</script>");
         	
         } else if (result == -2) {
         	PrintWriter script = response.getWriter();
         	script.println("<script>");
-        	script.println("alert('µ¥ÀÌÅÍº£ÀÌ½º ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.')");
+        	script.println("alert('ë°ì´í„°ë² ì´ìŠ¤ ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.')");
         	script.println("history.back()");
         	script.println("</script>");
         }

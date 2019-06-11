@@ -12,9 +12,9 @@ public class UserDAO {
 	
 //	자연스럽게 데이터베이스 커넥션이 이루어질 수 있도록
 	public UserDAO() {
-		try {
+		try {			
 //			3306:우리 컴퓨터에 설치된 mysql 자체
-			String dbURL = "jdbc:mysql://localhost:3306/learncode";
+  			String dbURL = "jdbc:mysql://localhost:3306/learncode";
 //			String dbURL = "jdbc:mysql://localhost:3306/learncode?serverTimezone=UTC&useSSL=false";
 			String dbID = "root";
 			String dbPassword = "yryr0216";

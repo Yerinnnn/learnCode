@@ -1,21 +1,22 @@
 package bbs;
 
 import java.sql.Connection;
+
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.HashMap;
+//import java.util.HashMap;
 
 public class free_BbsDAO {
 
 	private Connection conn;
 	private ResultSet rs;
 	public int total;
-
+//useUnicode=true&characterEncoding=utf-8
 	public free_BbsDAO() {
 		try {
-			String dbURL = "jdbc:mysql://localhost:3306/learncode";
+			String dbURL = "jdbc:mysql://localhost:3306/learncode?";
 			String dbID = "root";
 			String dbPassword = "yryr0216";
 			Class.forName("com.mysql.jdbc.Driver");
@@ -94,7 +95,7 @@ public class free_BbsDAO {
 //	}
 
 	public int write(String bbsTitle, String username, String bbsContent) {
-		String SQL = "INSERT INTO free_bbs VALUE (?, ?, ?, ?, ?, ?)";
+		String SQL = "INSERT INTO free_bbs VALUE (?, ?, ?, ?, ?, ?);";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
 			pstmt.setInt(1, getNext());

@@ -164,7 +164,7 @@
 
 									if (list.size() == 0) {
 								%>
-								<div>0</div>
+								<div>총 게시글: 0</div>
 								<div style="text-align: center;">
 									<h4>등록된 글이 없습니다.</h4>
 								</div>
@@ -203,10 +203,6 @@
 									}
 								%>
 								<div class="bbs-list-item-last"></div>
-
-
-
-
 							</article>
 
 							<%
