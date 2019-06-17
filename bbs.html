@@ -1,199 +1,296 @@
-<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ page import="java.io.PrintWriter" %> -->
-<!doctype html>
-<html class="no-js" lang="ko">
+<!DOCTYPE HTML>
+<!--
+	Verti by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>learn Code</title>
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/sidebar.css">
-    <link rel="stylesheet" href="css/bbs.css">
+	<title>learn Code</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/bbs.css" />
 </head>
 
-<body>
-    <!-- <%
-		String username = null;
-		if (session.getAttribute("username") != null) {
-			username = (String) session.getAttribute("username");
-		}
-	%> -->
+<body class="is-preload left-sidebar">
+	<div id="page-wrapper">
 
-    <!-- header 부분 -->
-    <div class="title-bar" data-responsive-toggle="realEstateMenu" data-hide-for="small">
-        <button class="menu-icon" type="button" data-toggle></button>
-        <div class="title-bar-title">Menu</div>
-    </div>
-    <div class="top-bar" id="realEstateMenu">
-        <div class="top-bar-left">
-            <ul class="menu" id="main-menu" data-responsive-menu="accordion">
-                <li class="menu-text"><a href="main.jsp">learn Code</a></li>
-                <li><a href="#">code</a></li>
-                <li><a href="#">roadmap</a>
-                    <ul id="sub-menu">
-                        <li><a href="roadmap/webDeveloper_roadmap.jsp" area-label="sub-menu">웹개발자</a></li>
-                        <li><a href="#" area-label="sub-menu">보안</a></li>
-                        <li><a href="#" area-label="sub-menu">인공지능</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">board</a>
-                    <ul id="sub-menu">
-                        <li><a href="#" area-label="sub-menu">취업/진로 게시판</a></li>
-                        <li><a href="#" area-label="sub-menu">자유 게시판</a></li>
-                        <li><a href="#" area-label="sub-menu">QnA</a></li>
-                    </ul>
-                </li>
-                <li class="search"><a href="#">
-                        <image class="search_icon" src="images/search.png"></image>
-                    </a></li>
-            </ul>
-        </div>
-        <!-- <%
-    	if(username == null) {
-    		
-    %> -->
-        <div class="top-bar-right">
-            <ul class="menu">
-                <!-- <li><a href="#">My Account</a></li> -->
-                <li><a class="button" href="login.jsp">Login</a></li>
-                <!-- <li><a class="button" href="">Logout</a></li> -->
-            </ul>
-        </div>
-    </div>
-    <!-- <%
-    	} else {
-  %> -->
-    <div class="top-bar-right">
-        <ul class="menu">
-            <li><a href="myAccount.jsp">My Account</a></li>
-            <li><a class="button" href="logoutAction.jsp">Logout</a></li>
-            <!-- <li><a class="button" href="">Logout</a></li> -->
-        </ul>
-    </div>
-    </div>
-    <!-- <%
-    	}
-  %> -->
+		<!-- Header -->
+		<div id="header-wrapper">
+			<header id="header" class="container">
 
+				<!-- Logo -->
+				<div id="logo">
+					<h1><a href="index.html">learn Code</a></h1>
+				</div>
 
-    <!-- <div class="search_form">
-        <form action="">
-            <input class="search_bar" type="text">
-            <input class="search_button" type='submit' value='search' />
-        </form>
-    </div> -->
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<!-- <li class="current"><a href="index.html">Welcome</a></li> -->
+						<li><a href="left-sidebar.html">code</a></li>
+						<li>
+							<a href="#">roadmap</a>
+							<ul>
+								<li><a href="#">웹 개발자 로드맵</a></li>
+								<li><a href="#">앱 개발자 로드맵</a></li>
+								<li><a href="#">보안 전문가 로드맵</a></li>
+								<li><a href="#">#</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" id="active">board</a>
+							<ul>
+								<li><a href="#">자유 게시판</a></li>
+								<li><a href="#">취업/진로 게시판</a></li>
+								<li><a href="#">QnA</a></li>
+								<!-- <li>
+									<a href="#">Phasellus consequat</a>
+									<ul>
+										<li><a href="#">Lorem ipsum dolor</a></li>
+										<li><a href="#">Phasellus consequat</a></li>
+										<li><a href="#">Magna phasellus</a></li>
+										<li><a href="#">Etiam dolore nisl</a></li>
+									</ul>
+								</li> -->
+							</ul>
+						</li>
+						<!-- <li>
+							<a href="#"><img src="images/search.png" alt="" style="width:13px"></a>
+							<ul>
+								<li>
+									<form action="#">
+										<input type="text">
+										<input type="submit">
+									</form>
+								</li>
+							</ul>
+						</li> -->
+						<li class="current"><a href="#">login</a></li>
+						<!-- <li>
+							<a href="#">my account</a>
+							<ul>
+								<li><a href="#">my page</a></li>
+								<li><a href="#">logout</a></li>
+							</ul>
+						</li> -->
+					</ul>
+				</nav>
 
 
+			</header>
+		</div>
 
-    <!-- main 부분 -->
-    <div class="main">
-        <div class="side-bar-left">
-            <div>
-                <div><a>웹 개발자 로드맵</a></div>
-                <div><a>앱 개발자 로드맵</a></div>
-                <div><a>보안 전문가 로드맵</a></div>
-            </div>
-        </div>
-    </div>
-        <div class="main-area">
-            <div class="info-tit">
-                <div class="sub-tit"><h4>취업/진로 게시판</h4></div>
-                <div class="sub-tit-decription"><p>광고글을 올릴시 무단삭제, 활동정지 될 수 있습니다.</p></div>
-            </div>
-            <div class="bbs-list">
-                <table>
-                    <thead>
-                        <tr id="normalTableTitle">
-                            <th style="width: 88px;height: 44.67px;">번호</th>
-                            <th style="width: 438px;height: 44.67px;">제목</th>
-                            <th style="width: 118px;height: 44.67px;">작성자</th>
-                            <th style="width: 80px;height: 44.67px;">작성일</th>
-                            <th style="width: 68px;height: 44.67px;">조회</th>
-                            <th style="width: 68px;height: 44.67px;">좋아요</th>
-                        </tr>
-                    </thead>
-                    <tr></tr>
+		<!-- Main -->
+		<div id="main-wrapper">
+			<div class="container">
+				<div class="row gtr-200">
+					<div class="sidebar col-12-medium">
+						<div id="sidebar">
 
-                </table>
-            </div>
-        </div>
+							<!-- Sidebar -->
+							<section>
+								<div class="filter">
+									<h3 class="filter-title">board</h3>
+									<ul>
+										<li><a class="filter-item filter-item-active">자유 게시판<span
+													class="count">253</span></a></li>
+										<li><a class="filter-item">취업/진로 게시판<span class="count">253</span></a></li>
+										<li><a class="filter-item">QnA<span class="count">253</span></a></li>
+										<li><a></a></li>
+									</ul>
+								</div>
+								<p></p>
+								<footer>
+									<a href="#" class="button icon fa-info-circle" style="font-size: 1.3em">Find out
+										more</a>
+								</footer>
+							</section>
 
-    </div>
+							<section>
+								<h3>Subheading</h3>
+								<ul class="style2">
+									<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
+									<li><a href="#">Ornare in hendrerit in lectus</a></li>
+									<li><a href="#">Semper mod quis eget mi dolore</a></li>
+									<li><a href="#">Quam turpis feugiat sit dolor</a></li>
+									<li><a href="#">Amet ornare in hendrerit in lectus</a></li>
+									<li><a href="#">Semper mod quisturpis nisi</a></li>
+								</ul>
+							</section>
+
+						</div>
+					</div>
+					<div class="col-8 col-12-medium imp-medium">
+						<div id="content">
+
+							<!-- Content -->
+							<article>
+								<div class="bbs-description">
+									<h2 class="bbs-title">자유 게시판</h2>
+									<p>광고글을 올릴시 무단삭제, 활동정지 될 수 있습니다</p>
+								</div>
+								<div>19003</div>
 
 
+								<div class="bbs-list-item" style="border-top: 0.5px solid rgb(156, 156, 156)">
+									<div class="item-main">
+										<div class="item-number">001</div>
+										<div class="item-title">안녕하세요 가입 인사 드립니다</div>
+										<span class="item-username"><i>신예린</i></span>
+										<span class="item-date">2019/04/05</span>
+									</div>
+									<div class="item-sub">
+										<div class="item-count">253</div>
+										<div class="item-like">
+											<!-- <svg></svg> -->
+											12</div>
+									</div>
+								</div>
+								<div class="bbs-list-item">
+									<div class="item-main">
+										<div class="item-title">안녕하세요 가입 인사 드립니다</div>
+										<span class="item-username"><i>신예린</i></span>
+										<span class="item-date">2019/04/05</span>
+									</div>
+									<div class="item-sub">
+										<div class="item-count">253</div>
+										<div class="item-like">
+											<!-- <svg></svg> -->
+											12</div>
+									</div>
+								</div>
+								<div class="bbs-list-item">
+									<div class="item-main">
+										<div class="item-title">안녕하세요 가입 인사 드립니다</div>
+										<span class="item-username"><i>신예린</i></span>
+										<span class="item-date">2019/04/05</span>
+									</div>
+									<div class="item-sub">
+										<div class="item-count">253</div>
+										<div class="item-like">
+											<!-- <svg></svg> -->
+											12</div>
+									</div>
+								</div>
+								<div class="bbs-list-item">
+									<div class="item-main">
+										<div class="item-title">안녕하세요 가입 인사 드립니다</div>
+										<span class="item-username"><i>신예린</i></span>
+										<span class="item-date">2019/04/05</span>
+									</div>
+									<div class="item-sub">
+										<div class="item-count">253</div>
+										<div class="item-like">
+											<!-- <svg></svg> -->
+											12</div>
+									</div>
+								</div>
 
-    <!-- footer 부분 -->
-    <footer>
-        <div class="row expanded callout secondary">
-            <div class="small-6 large-3 columns">
-                <p class="lead">Offices</p>
-                <ul class="menu vertical">
-                    <li><a href="#">One</a></li>
-                    <li><a href="#">Two</a></li>
-                    <li><a href="#">Three</a></li>
-                    <li><a href="#">Four</a></li>
-                </ul>
-            </div>
-            <div class="small-6 large-3 columns">
-                <p class="lead">Solar Systems</p>
-                <ul class="menu vertical">
-                    <li><a href="#">One</a></li>
-                    <li><a href="#">Two</a></li>
-                    <li><a href="#">Three</a></li>
-                    <li><a href="#">Four</a></li>
-                </ul>
-            </div>
-            <div class="small-6 large-3 columns">
-                <p class="lead">Contact</p>
-                <ul class="menu vertical">
-                    <li><a href="#"><i class="fi-social-twitter"></i> Twitter</a></li>
-                    <li><a href="#"><i class="fi-social-facebook"></i> Facebook</a></li>
-                    <li><a href="#"><i class="fi-social-instagram"></i> Instagram</a></li>
-                    <li><a href="#"><i class="fi-social-pinterest"></i> Pinterest</a></li>
-                </ul>
-            </div>
-            <div class="small-6 large-3 columns">
-                <p class="lead">Offices</p>
-                <ul class="menu vertical">
-                    <li><a href="#">One</a></li>
-                    <li><a href="#">Two</a></li>
-                    <li><a href="#">Three</a></li>
-                    <li><a href="#">Four</a></li>
-                </ul>
-            </div>
-        </div>
 
-        <!-- 기타 부분 -->
-        <div class="row">
-            <div class="medium-6 columns">
-                <ul class="menu">
-                    <li><a href="#">Legal</a></li>
-                    <li><a href="#">Partner</a></li>
-                    <li><a href="#">Explore</a></li>
-                </ul>
-            </div>
-            <div class="medium-6 columns">
-                <ul class="menu float-right">
-                    <li class="menu-text">Copyright</li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+							</article>
 
-    <!-- script -->
 
-    <!-- load more 버튼 누르면 더 나오게 -->
-    <!-- see load map -->
-    <!-- start a free trial -->
-    <!-- login -->
-    <!-- search now -->
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-    <script>
-        $(document).foundation();
-    </script>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div id="footer-wrapper">
+			<footer id="footer" class="container">
+				<div class="row">
+					<div class="col-3 col-6-medium col-12-small">
+
+						<!-- Links -->
+						<section class="widget links">
+							<h3>Random Stuff</h3>
+							<ul class="style2">
+								<li><a href="#">Etiam feugiat condimentum</a></li>
+								<li><a href="#">Aliquam imperdiet suscipit odio</a></li>
+								<li><a href="#">Sed porttitor cras in erat nec</a></li>
+								<li><a href="#">Felis varius pellentesque potenti</a></li>
+								<li><a href="#">Nullam scelerisque blandit leo</a></li>
+							</ul>
+						</section>
+
+					</div>
+					<div class="col-3 col-6-medium col-12-small">
+
+						<!-- Links -->
+						<section class="widget links">
+							<h3>Random Stuff</h3>
+							<ul class="style2">
+								<li><a href="#">Etiam feugiat condimentum</a></li>
+								<li><a href="#">Aliquam imperdiet suscipit odio</a></li>
+								<li><a href="#">Sed porttitor cras in erat nec</a></li>
+								<li><a href="#">Felis varius pellentesque potenti</a></li>
+								<li><a href="#">Nullam scelerisque blandit leo</a></li>
+							</ul>
+						</section>
+
+					</div>
+					<div class="col-3 col-6-medium col-12-small">
+
+						<!-- Links -->
+						<section class="widget links">
+							<h3>Random Stuff</h3>
+							<ul class="style2">
+								<li><a href="#">Etiam feugiat condimentum</a></li>
+								<li><a href="#">Aliquam imperdiet suscipit odio</a></li>
+								<li><a href="#">Sed porttitor cras in erat nec</a></li>
+								<li><a href="#">Felis varius pellentesque potenti</a></li>
+								<li><a href="#">Nullam scelerisque blandit leo</a></li>
+							</ul>
+						</section>
+
+					</div>
+					<div class="col-3 col-6-medium col-12-small">
+
+						<!-- Contact -->
+						<section class="widget contact">
+							<h3>Contact Us</h3>
+							<ul>
+								<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+								<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
+							</ul>
+							<p>1234 Fictional Road<br />
+								Nashville, TN 00000<br />
+								(800) 555-0000</p>
+						</section>
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<div id="copyright">
+							<ul class="menu">
+								<li>&copy; Untitled. All rights reserved</li>
+								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,199 @@
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.io.PrintWriter" %> -->
+<!doctype html>
+<html class="no-js" lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>learn Code</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/bbs.css">
+</head>
+
+<body>
+    <!-- <%
+		String username = null;
+		if (session.getAttribute("username") != null) {
+			username = (String) session.getAttribute("username");
+		}
+	%> -->
+
+    <!-- header 부분 -->
+    <div class="title-bar" data-responsive-toggle="realEstateMenu" data-hide-for="small">
+        <button class="menu-icon" type="button" data-toggle></button>
+        <div class="title-bar-title">Menu</div>
+    </div>
+    <div class="top-bar" id="realEstateMenu">
+        <div class="top-bar-left">
+            <ul class="menu" id="main-menu" data-responsive-menu="accordion">
+                <li class="menu-text"><a href="main.jsp">learn Code</a></li>
+                <li><a href="#">code</a></li>
+                <li><a href="#">roadmap</a>
+                    <ul id="sub-menu">
+                        <li><a href="roadmap/webDeveloper_roadmap.jsp" area-label="sub-menu">웹개발자</a></li>
+                        <li><a href="#" area-label="sub-menu">보안</a></li>
+                        <li><a href="#" area-label="sub-menu">인공지능</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">board</a>
+                    <ul id="sub-menu">
+                        <li><a href="#" area-label="sub-menu">취업/진로 게시판</a></li>
+                        <li><a href="#" area-label="sub-menu">자유 게시판</a></li>
+                        <li><a href="#" area-label="sub-menu">QnA</a></li>
+                    </ul>
+                </li>
+                <li class="search"><a href="#">
+                        <image class="search_icon" src="images/search.png"></image>
+                    </a></li>
+            </ul>
+        </div>
+        <!-- <%
+    	if(username == null) {
+    		
+    %> -->
+        <div class="top-bar-right">
+            <ul class="menu">
+                <!-- <li><a href="#">My Account</a></li> -->
+                <li><a class="button" href="login.jsp">Login</a></li>
+                <!-- <li><a class="button" href="">Logout</a></li> -->
+            </ul>
+        </div>
+    </div>
+    <!-- <%
+    	} else {
+  %> -->
+    <div class="top-bar-right">
+        <ul class="menu">
+            <li><a href="myAccount.jsp">My Account</a></li>
+            <li><a class="button" href="logoutAction.jsp">Logout</a></li>
+            <!-- <li><a class="button" href="">Logout</a></li> -->
+        </ul>
+    </div>
+    </div>
+    <!-- <%
+    	}
+  %> -->
+
+
+    <!-- <div class="search_form">
+        <form action="">
+            <input class="search_bar" type="text">
+            <input class="search_button" type='submit' value='search' />
+        </form>
+    </div> -->
+
+
+
+    <!-- main 부분 -->
+    <div class="main">
+        <div class="side-bar-left">
+            <div>
+                <div><a>웹 개발자 로드맵</a></div>
+                <div><a>앱 개발자 로드맵</a></div>
+                <div><a>보안 전문가 로드맵</a></div>
+            </div>
+        </div>
+    </div>
+        <div class="main-area">
+            <div class="info-tit">
+                <div class="sub-tit"><h4>취업/진로 게시판</h4></div>
+                <div class="sub-tit-decription"><p>광고글을 올릴시 무단삭제, 활동정지 될 수 있습니다.</p></div>
+            </div>
+            <div class="bbs-list">
+                <table>
+                    <thead>
+                        <tr id="normalTableTitle">
+                            <th style="width: 88px;height: 44.67px;">번호</th>
+                            <th style="width: 438px;height: 44.67px;">제목</th>
+                            <th style="width: 118px;height: 44.67px;">작성자</th>
+                            <th style="width: 80px;height: 44.67px;">작성일</th>
+                            <th style="width: 68px;height: 44.67px;">조회</th>
+                            <th style="width: 68px;height: 44.67px;">좋아요</th>
+                        </tr>
+                    </thead>
+                    <tr></tr>
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- footer 부분 -->
+    <footer>
+        <div class="row expanded callout secondary">
+            <div class="small-6 large-3 columns">
+                <p class="lead">Offices</p>
+                <ul class="menu vertical">
+                    <li><a href="#">One</a></li>
+                    <li><a href="#">Two</a></li>
+                    <li><a href="#">Three</a></li>
+                    <li><a href="#">Four</a></li>
+                </ul>
+            </div>
+            <div class="small-6 large-3 columns">
+                <p class="lead">Solar Systems</p>
+                <ul class="menu vertical">
+                    <li><a href="#">One</a></li>
+                    <li><a href="#">Two</a></li>
+                    <li><a href="#">Three</a></li>
+                    <li><a href="#">Four</a></li>
+                </ul>
+            </div>
+            <div class="small-6 large-3 columns">
+                <p class="lead">Contact</p>
+                <ul class="menu vertical">
+                    <li><a href="#"><i class="fi-social-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fi-social-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fi-social-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fi-social-pinterest"></i> Pinterest</a></li>
+                </ul>
+            </div>
+            <div class="small-6 large-3 columns">
+                <p class="lead">Offices</p>
+                <ul class="menu vertical">
+                    <li><a href="#">One</a></li>
+                    <li><a href="#">Two</a></li>
+                    <li><a href="#">Three</a></li>
+                    <li><a href="#">Four</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 기타 부분 -->
+        <div class="row">
+            <div class="medium-6 columns">
+                <ul class="menu">
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="#">Partner</a></li>
+                    <li><a href="#">Explore</a></li>
+                </ul>
+            </div>
+            <div class="medium-6 columns">
+                <ul class="menu float-right">
+                    <li class="menu-text">Copyright</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- script -->
+
+    <!-- load more 버튼 누르면 더 나오게 -->
+    <!-- see load map -->
+    <!-- start a free trial -->
+    <!-- login -->
+    <!-- search now -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+</body>
+
+</html>
